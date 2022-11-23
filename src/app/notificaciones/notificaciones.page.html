@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="vales"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Notificaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label *ngFor="let push of pushService.mensajes">
+          <p>{{push.title}}</p>
+          <h2>{{push.body}}</h2>
+          <p>{{push.additionalData | json}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    
+  </ion-content>
+  
